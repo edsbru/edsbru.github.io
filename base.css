@@ -1,0 +1,17 @@
+header,h1,nav,article,aside{
+	padding:0;
+	margin:0;
+	border:1px solid black;
+}
+
+a {
+	color:whitesmoke
+}
+
+header{
+    color: whitesmoke;
+    width: 100%;
+    background-color: rgb(47, 152, 238);
+    display: flex;
+    justify-content: space-between;
+}
