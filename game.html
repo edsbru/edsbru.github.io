@@ -11,8 +11,15 @@
 		<link rel="stylesheet" href="game.css"/>
 		
 		<script>
+		
+		let game_data;
+		
+		document.getElementById("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong>Best juego de terror</p>";
+		document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[0].name+". ¿Que quieres hacer? </p>";
 		function game (data)
 		{
+		game data = data;
+		
 		console.log(data.rooms[0].name);
 		}
 		
