@@ -14,8 +14,11 @@
 		
 		let game_data;
 		
+		let current_room = 0;
+		let items_picked = [];
+		
 		document.getElementById("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong>Best juego de terror</p>";
-		document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[0].name+". ¿Que quieres hacer? </p>";
+		document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current_room].name". ¿Que quieres hacer? </p>";
 		function game (data)
 		{
 		game data = data;
@@ -23,7 +26,7 @@
 		console.log(data.rooms[0].name);
 		}
 		
-		fetch("https://edsbru.github.io/game.json").then(response => response.json()).then(data => console.log(data));
+		fetch("https://edsbru.github.io/game.json").then(response => response.json()).then(data => game (data));
 		</script>
 
 		</head>
