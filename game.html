@@ -8,12 +8,14 @@
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 		<link rel="stylesheet" href="base.css"/>
+		<link rel="stylesheet" href="game.css"/>
 		
 		<script>
 		function game (data)
 		{
 		console.log(data.rooms[0].name);
 		}
+		
 		fetch("https://edsbru.github.io/game.json").then(response => response.json()).then(data => console.log(data));
 		</script>
 
@@ -38,6 +40,12 @@
 	<article>
 	<h2>Artículo</h2>
 	</article>
+
+<form>
+<div id="terminal"></div>
+<input type="text" id="commands" />
+<input type="submit" id="Acción" />
+</form>
 
 	<aside>
 	<h2>Lateral</h2>
