@@ -17,13 +17,24 @@
 		let current_room = 0;
 		let items_picked = [];
 		
-		document.getElementById("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong>Best juego de terror</p>";
-		document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current_room].name". ¿Que quieres hacer? </p>";
 		function game (data)
 		{
-		game data = data;
+		
+		
+		game_data = data;
+		
+		
+		document.getElementById("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong>Best juego de terror</p>";
+		document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current_room].name+". ¿Que quieres hacer? </p>";
 		
 		console.log(data.rooms[0].name);
+		}
+		
+		function readAction(){
+		 let command = document.getElementById("commands").value;
+		 
+		 let data = command.split(" ");
+		 console.log(data);
 		}
 		
 		fetch("https://edsbru.github.io/game.json").then(response => response.json()).then(data => game (data));
@@ -54,7 +65,7 @@
 <form>
 <div id="terminal"></div>
 <input type="text" id="commands" />
-<input type="submit" id="Acción" />
+<input type="submit" value="Acción" onclick="readAction(); return false;" />
 </form>
 
 	<aside>
