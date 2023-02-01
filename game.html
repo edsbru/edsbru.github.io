@@ -24,20 +24,40 @@
 		game_data = data;
 		
 		
-		document.getElementById("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong>Best juego de terror</p>";
+		document.getElementById("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong> Best juego de terror</p>";
 		document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current_room].name+". ¿Que quieres hacer? </p>";
 		
 		console.log(data.rooms[0].name);
 		}
 		
+		function parseCommand (command){
+		
+		}
+		
+		function parseInstruction (instruction){
+		
+		}
+		
 		function readAction(){
-		 let command = document.getElementById("commands").value;
+		 let instruction = document.getElementById("commands").value;
 		 
-		 let data = command.split(" ");
-		 console.log(data);
+		 let data = instruction.trim().split(" ");
+		
+		 if (data.length == 0){
+		 document.getElementById("terminal").innerHTML += "<p><strong>ERROR</strong>: escribe una instrucción</p>";
+		 return;
+		 }
+		 
+		 if (data.length == 1){
+		   parseCommand(data[0]);
+		}
+		else{
+			parseInstruction(data);
 		}
 		
 		fetch("https://edsbru.github.io/game.json").then(response => response.json()).then(data => game (data));
+			
+		/* pasar los datos si hay una casilla del arry y otra que le pase si hay mas de 1*/
 		</script>
 
 		</head>
