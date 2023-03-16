@@ -28,7 +28,7 @@ Aqui almacenaremos la pagina web de la asignatura y ejemplos de varios lenguajes
  - [ ] Aprender JS
  - [x] Aprender SQL
  
- Guion, espacio y llaves anguladas para una lista.
+ Guion, espacio y llaves anguladas para hacer una lista.
 
 
 -¿Qué es HTML? ¿CSS? ¿Javascript?
