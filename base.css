@@ -1,46 +1,112 @@
-html{
+/* Apply default styles to the page */
+body {
 	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+  }
+  
+  /* Style the header */
+  header {
+	background-color: #333;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+  }
+  
+  header h1 {
+	margin: 0;
+  }
+  
+  nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+  }
+  
+  nav li {
+	margin: 0 10px;
+  }
+  
+  nav a {
+	color: white;
+	text-decoration: none;
+  }
+  
+  nav a:hover {
+	text-decoration: underline;
+  }
+  
+  /* Style the main content area */
+  main {
+	display: flex;
+	margin: 20px;
+  }
+  
+  article {
+	flex: 1;
+	margin-right: 20px;
+  }
+  
+  aside {
+	flex: 3;
+  }
+  
+img{
+	width: 100%;
 }
 
-header,h1,nav,article,aside{
-	padding:0;
-	margin:0;
-	border:1px solid black;
-}
+  /* Style the footer */
+  footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	position:fixed;
+	width: 100%;
+	bottom:0;
+  }
+  
+  footer p {
+	margin: 0;
+  }
+  
+  #footer-year {
+	font-weight: bold;
+  }
 
-a {
-	color:whitesmoke
-}
-
-header{
-    color: whitesmoke;
-    width: 100%;
-    background-color: rgb(47, 152, 238);
-    display: flex;
-    justify-content: space-between;
-}
-
-main{
-	display: flex;	
-}
-
-aside{
-	flex-basis: 25%;
-}
-
-article{
-	flex-basis: 75%;
-}
-
-@media (max-width: 600px){
-	main{
-		flex-direction:column;
-	}
-	article{
-		flex-basis=100%;
-	}
-	
-	aside{
-		flex-basis=100%;
-	}
-}
+  .social-media {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+  }
+  
+  button {
+	background-color: #333;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 0 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+	background-color: #555;
+  }
+  
+  .btn-twitter {
+	background-color: #1DA1F2;
+  }
+  
+  .btn-instagram {
+	background-color: #C13584;
+  }
+  
+  .btn-linkedin {
+	background-color: #0077B5;
+  }
+  
